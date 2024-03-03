@@ -203,3 +203,12 @@ a {
     text-decoration: none;
     color: red;
 }
+
+@media (max-width: 1274.9px){
+    head{
+        width: 100%;
+    }
+body {
+    width: 1164px;
+}
+}
