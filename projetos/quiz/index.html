@@ -1,0 +1,124 @@
+<html>
+  <div class="background">
+  <link rel="stylesheet" href="style.css">
+    <head>
+        <title>Perguntas e Respostas</title>
+        <div class="nome"><h1>Quiz</h1></div>
+    </head>
+    <body>
+        <div class="Questões">
+            <div class="title">
+                <h2> how many elements are there in periodic table?</h2>
+            </div>
+    
+            <form class="pergunta">
+                <div class = "resposta">
+                  <span><i>a- 116</i></span>
+                  <input type="radio" name="pergunta1" value="incorreta"/>
+                  <br>
+                </div>
+    
+                <div class="resposta">
+                  <span><i>b- 123</i></span>
+                  <input type="radio" name="pergunta1" value="incorreta"/>
+                  <br>
+                </div>
+    
+                <div class="resposta">
+                  <span><i>c- 118</i></span>
+                  <input type="radio" name="pergunta1" value="correta"/>
+                  <br>
+                </div>
+            </form>
+         <!-------------------------------------------------------------->
+         <div class="title">
+            <h2> which actor won oscar in 2023 ?</h2>
+        </div>
+
+        <form class="pergunta">
+            <div class = "resposta">
+              <span><n><i>a- Brendan Fraser</i></n></span>
+              <input type="radio" name="pergunta1" value="correta"/>
+              <br>
+            </div>
+
+            <div class="resposta">
+              <span><n><i>b- Joaquin Phoenix</i></n></span>
+              <input type="radio" name="pergunta1" value="incorreta"/>
+              <br>
+            </div>
+
+            <div class="resposta">
+              <span><n><i>c- Leonardo DiCaprio</i></n></span>
+              <input type="radio" name="pergunta1" value="incorreta"/>
+              <br>
+            </div>
+         </form>
+         <!--------------------------------------------------------------->
+         <div class="title">
+            <h2> When did Word War II end ? </h2>
+        </div>
+
+        <form class="pergunta">
+            <div class = "resposta">
+              <span><n><i>a- 1840</i></n></span>
+              <input type="radio" name="pergunta1" value="incorreta"/>
+              <br>
+            </div>
+
+            <div class="resposta">
+              <span><n><i>b- 1988</i></n></span>
+              <input type="radio" name="pergunta1" value="incorreta"/>
+              <br>
+            </div>
+
+            <div class="resposta">
+              <span><n><i>c- 1945</i></n></span>
+              <input type="radio" name="pergunta1" value="correta"/>
+              <br>
+            </div>
+         </form>
+        </div>
+         <!--------------------------------------------------------------------------->
+         <script>
+            //1) Colocar o span e input dentro de uma div para preencher todo o espaço
+            //2) recuperar o elemento pai da opção correta ou incorreta
+            //3) depois de selecionado a resposta deixar o botão desabilitado
+
+            var elementos = document.querySelectorAll('[type=radio]')
+
+            for(var i= 0; i < elementos.length; i++){
+                elementos[i].addEventListener('change',function(e){
+                   let marcado = e.target.value;
+                   if(marcado == "correta"){
+                    alert('correct')
+                    let parentNode = e.target.parentNode;
+                    parentNode.style.backgroundColor = 'green';
+
+                    let els = parentNode.parentNode.querySelectorAll('[type = radio]')
+
+                    for(var n = 0; n < els.length; n ++){
+                        els[n].disabled= true;
+                    }
+
+                   }else if (marcado == "incorreta"){
+                    alert('wrong!')
+                    let parentNode = e.target.parentNode;
+                    parentNode.style.backgroundColor = 'red';
+
+                    let els = parentNode.parentNode.querySelectorAll('[type = radio]')
+
+                    for(var n = 0; n < els.length; n ++){
+                        els[n].disabled= true;
+                    }
+
+                    let correta = parentNode.parentNode.querySelector('[value=correta]');
+                    correta.parentNode.style.backgroundColor = 'green'
+
+                   }
+                })
+            }
+         </script>
+
+    </body>
+</html>

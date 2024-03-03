@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.aling img{
+    margin-left: 320px;
+}
+
+h1{
+    color: white;
+    background-color: #223020;
+    height: 10%;
+    font-size: 50px;
+}
+
+body{
+    background-color: black
+}
+
+h2{
+    color:white
+}
+ 

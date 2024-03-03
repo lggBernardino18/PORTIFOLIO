@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.nome{
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 10px;
+    background-color: black;
+}
+
+
+.title {
+    text-align: center;
+    margin: 10px 20px;
+    font-size: 22px;
+}
+
+.pergunta{
+    text-align: center;
+    margin: 10px 20px;
+    font-size: 20px;
+    padding-bottom: 3px;
+    color: brown;
+}
+
+span{
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.resposta{
+    color:white;
+    padding-top: 6px;
+    font-size: 25px;
+}
+
+.background{
+    background-color:#bec092;
+    height: 100%;
+    color: white;
+}
